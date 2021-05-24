@@ -1,0 +1,13 @@
+<div class='container'>
+    <div class ='header-cart'>
+        <h1 class='text-center mb-50'>カートの中身</h1>
+    </div>
+    <ul class='list-group'>
+        <% @product.each do |product| %>
+        <li class='list-group-product d-flex justify-content-between border p-3'>
+        <p><%= product.name %></p>
+        <span><%= product.price %>円 <a><%= link_to '×',product_delete_in_carts_path(product), method: :post, data: {confirm: '削除してもいいですか？'} %></a></span>
+        </li>
+        <% end %>
+    </ul>
+</div>

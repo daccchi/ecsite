@@ -1,0 +1,78 @@
+<div class="text-center">
+  <h1>まだ会員登録されていないお客様</h1>
+</div>
+
+<div class="row" >
+  <div class="col-sm-6 offset-sm-3">
+
+    <%= form_with(model: @customer, local: true) do |f| %>
+    <%= render 'layouts/error_messages', model: f.object %>
+      
+      <div class="form-group" width='50px'>
+        <%= f.label :name, 'お名前' %>
+        <%= f.text_field :family_name, class: 'form-control',placeholder: "例：山田" %>
+        <%= f.text_field :given_name, class: 'form-control',placeholder: "例：太郎" %>
+      </div>
+      
+      <div class="form-group" width='50px'>
+        <%= f.label :name, 'カナ' %>
+        <%= f.text_field :family_kana, class: 'form-control',placeholder: "例：ヤマダ" %>
+        <%= f.text_field :given_kana, class: 'form-control',placeholder:  "例：タロウ" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :sex, '性別' %>
+        <%= f.text_field :sex, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :barthday, '生年月日' %>
+        <%= f.text_field :barthday_year, class: 'form-control', placeholder: "例：1997"%>
+        <%= f.text_field :barthday_month, class: 'form-control', placeholder:"例：03"%>
+        <%= f.text_field :barthday_day, class: 'form-control' ,placeholder:"例：22"%>
+      </div>
+      
+      <div class="form-group">
+        <%= f.label :zip, '郵便番号' %>
+        <%= f.text_field :zip, class: 'form-control' %>
+      </div>
+      
+      <div class="form-group">
+        <%= f.label :pref, '都道府県' %>
+        <%= f.text_field :pref, class: 'form-control' %>
+      </div>
+      
+      <div class="form-group">
+        <%= f.label :addr, '住所' %>
+        <%= f.text_field :addr, class: 'form-control', placeholder: "例：○○市○○区○○町"%>
+        <%= f.text_field :addr2, class: 'form-control', placeholder:"例：○○1-1"%>
+        <%= f.text_field :addr3, class: 'form-control' ,placeholder:"例：○○マンション101号室"%>
+      </div>
+      
+      <div class="form-group">
+        <%= f.label :tel, '電話番号' %>
+        <%= f.text_field :tel, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :email, 'Email' %>
+        <%= f.email_field :email, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :password, 'パスワード' %>
+        <%= f.password_field :password, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :password_confirmation, 'パスワード確認' %>
+        <%= f.password_field :password_confirmation, class: 'form-control' %>
+      </div>
+      
+     
+
+      <%= f.submit '登録する', class: 'btn btn-dark' %>
+    <% end %>
+  </div>
+</div>
+

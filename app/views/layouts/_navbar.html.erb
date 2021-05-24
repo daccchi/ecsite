@@ -1,0 +1,31 @@
+<header class="mb-4">
+  <nav class="navbar navbar-expand-sm navbar-dark bg-white">
+    <div style="margin-left: 40%;">
+      <a class="navbar-brand " href="/"><%= image_tag "/dacchi2.PNG" %></a>
+    </div>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse justify-content-end row" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <% if logged_in? %>
+        <li style="font-size:15px;" class="nav-item col-3"><%= link_to '会員情報', customer_path(current_customer) %></li>
+        <li style="font-size:30px;" class="nav-item col-3"><a href="#" class="nav-link text-black-50"><i class="fas fa-shopping-cart"></i></a></li>
+        <li class="nav-item col-3"><%= link_to 'Logout', logout_path, method: :delete,  class: 'nav-link text-black-50' %></li>
+        <% else %>
+        <li style="font-size:30px;" class="nav-item col-3"><a href="/signup" class="nav-link text-black-50"><i class="far fa-user"></i></a></li>
+        <li style="font-size:30px;" class="nav-item col-3"><a href="#" class="nav-link text-black-50"><i class="fas fa-shopping-cart"></i></a></li>
+        <li class="nav-item col-3"><%= link_to 'Login', login_path, class: 'nav-link text-black-50' %></li>
+        <% end %>
+      </ul>
+    </div>
+  </nav>
+  
+  <ul style="width: 1000px; overflow: hidden; margin-left: 44%;">
+    <li style="float: left;  width: 100px;list-style-type: none;"><a onmouseover="this.style.backgroundColor='#C0C0C0'" onmouseout="this.style.backgroundColor='white'" style="display: block; padding: 20px 0;text-align: center;font-weight: bold;text-decoration: none;background-color: #fff;  color: #000;" href="/aboutus">ABOUT ME</a></li>
+    <li style="float: left;  width: 100px;list-style-type: none;"><a onmouseover="this.style.backgroundColor='#C0C0C0'" onmouseout="this.style.backgroundColor='white'" style="display: block; padding: 20px 0;text-align: center;font-weight: bold;text-decoration: none;background-color: #fff;  color: #000;" href="/products">PRODUCT</a></li>
+  </ul>
+  
+</header>
