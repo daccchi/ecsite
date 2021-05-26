@@ -4,27 +4,27 @@
 
     <div  style="float:left;"> 
        <h2>ペン</h2>
-       <p><a  href="/products/1"> <img src="/<%=@product1.image%>" alt="DACCHI HOME"  width="420px" height="420px"></a></p>
-       <p><a  href="/products/1">view more</a></p>
+       <p><%= link_to image_tag("/pen2.PNG", width: '420',height:'420'), @product1 %></p>
+       <p><%= link_to "view more",@product1 %></p>
     </div>
     
     <div> 
        <h2>時計</h2>
-       <p><a  href="/products/2"> <img src="/<%=@product2.image%>" alt="DACCHI HOME"  width="420px" height="420px"></a></p>
-       <p><a  href="/products/2">view more</a></p>
+       <p><%= link_to image_tag("/clock2.PNG", width: '420',height:'420'), @product2 %></p>
+       <p><%= link_to "view more",@product2 %></p>
     </div>
     
     <div  style="float:left;">
        <h2>テニスボール</h2> 
-       <p><a  href="/products/3"> <img src="/<%=@product3.image%>" alt="DACCHI HOME"  width="420px" height="420px"></a></p>
-       <p><a  href="/products/3">view more</a></p>
+       <p><%= link_to image_tag("/tennis ball2.PNG", width: '420',height:'420'), @product3 %></p>
+       <p><%= link_to "view more",@product3 %></p>
 
     </div>
     
     <div>
        <h2>靴</h2> 
-       <p><a  href="/products/4"> <img src="/<%=@product4.image%>" alt="DACCHI HOME"  width="420px" height="420px"></a></p>
-       <p><a  href="/products/4">view more</a></p>
+       <p><%= link_to image_tag("/shoes2.PNG", width: '420',height:'420'), @product4 %></p>
+       <p><%= link_to "view more",@product4 %></p>
     </div>
 
 </div>

@@ -9,10 +9,10 @@
 <h1 style="text-align:center;">RANKING</h1>
 
 <ul  style="width: 1000px; overflow: hidden; list-style-type: none; text-align:center;" >
-        <li class="img_wrap" style="display: inline;" ><a  href="/products/1" > <%= image_tag "/pen.PNG", width: '24%', height: '24%'%></a></li>
-        <li class="img_wrap" style="display: inline;"><a  href="/products/2"><%= image_tag "/clock.PNG", width: '24%', height: '24%'%></a></li>
-        <li class="img_wrap"  style="display: inline;"><a  href="/products/3"><%= image_tag "/tennis ball.PNG", width: '24%', height: '24%'%></a></li>
-        <li class="img_wrap"  style="display: inline;"><a  href="/products/4"><%= image_tag "/shoes.PNG", width: '24%', height: '24%'%></a></li>
+        <li class="img_wrap" style="display: inline;" ><%= link_to image_tag("/pen.PNG", width: '230',height:'230'), @product1 %></li>
+        <li class="img_wrap" style="display: inline;"><%= link_to image_tag("/clock.PNG", width: '230',height:'230'), @product2 %></li>
+        <li class="img_wrap"  style="display: inline;"><%= link_to image_tag("/tennis ball.PNG", width: '230',height:'230'), @product3 %></li>
+        <li class="img_wrap"  style="display: inline;"><%= link_to image_tag("/shoes.PNG", width: '230',height:'230'), @product4 %></li>
 </ul>
     
 
