@@ -1,3 +1,4 @@
+
 Rails.application.routes.draw do
   root to: 'toppages#index'
   get 'aboutus',to: 'aboutus#index'
@@ -9,18 +10,14 @@ Rails.application.routes.draw do
   get 'signup', to: 'customers#new'
   resources :customers, only: [:show, :create]
   
- resources :products
-    
-resource :cart, only: [:show]
+  resource :cart, only: %i(show)
   
-  
-  
-  
-  get '/my_cart' => 'carts#my_cart'
-  post '/add_item' => 'carts#add_item'
-  post '/update_item' => 'carts#update_item'
-  delete '/delete_item' => 'carts#delete_item'
-  
-  
-  
+  get 'products', to: 'products#index'
+  resources :products, only: %i(new show create) do
+    scope module: :products do
+      resources :add_to_carts, only: %i(create)
+      resources :delete_in_carts, only: %i(create)
+    end
+
+ end
 end

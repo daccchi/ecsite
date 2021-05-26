@@ -12,10 +12,9 @@ class Customer < ApplicationRecord
     validates :sex, presence: true, length: { maximum: 3 }
     has_secure_password
     has_one :cart, dependent: :destroy
-    has_many :products
     
-     
-     def prepare_cart
-      cart || create_cart
-     end
+    def prepare_cart
+     cart || create_cart
+    end
+
 end

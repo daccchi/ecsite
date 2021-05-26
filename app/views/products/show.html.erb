@@ -1,24 +1,9 @@
 <h1><%= @product.product_name %></h1>
 <p><%= @product.comment %></p>
 
-<aside class="col-sm-4">
-      <%= form_with(model:@product, local: true) do |f| %>
-        <div class="form-group">
-          <%= f.text_area :product_name, class: 'form-control', rows: 5 %>
-          <%= f.text_area :price, class: 'form-control', rows: 5 %>
-        </div>
-  
-      <% end %>
-</aside>
-    
-    
-<aside class="col-sm-4">
-      <%= form_with(model: @micropost, local: true) do |f| %>
 
-        <%= f.submit '購入する', class: 'btn btn-primary btn-block' %>
-      <% end %>
-</aside>
     
 <img src="/<%=@product.image%>">
 <p>￥<%= @product.price %>円</p>
-<p><a  href="/my_cart">購入する</a></p>
+
+<%= link_to '購入する', product_add_to_carts_path(@product), method: :post , class: 'btn btn-light' %>
