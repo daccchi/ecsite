@@ -6,8 +6,23 @@
         <% @product.each do |product| %>
         <li class='list-group-product d-flex justify-content-between border p-3'>
         <p><%= product.product_name %></p>
+        <%= image_tag '/product.image' %>
         <span><%= product.price %>円 <a><%= link_to '×',product_delete_in_carts_path(product), method: :post, data: {confirm: '削除してもいいですか？'} %></a></span>
         </li>
         <% end %>
     </ul>
+    
+    <p>合計金額 <%=@total_price%> 円</p>
+    
+    <%= form_tag charge_path do %>
+      <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key=ENV['STRIPE_API_KEY']
+            data-description="payment"
+            data-amount=<%=@total_price%>
+            
+            data-currency="jpy"
+            data-locale="auto"></script>
+    <% end %>
+    
 </div>
+

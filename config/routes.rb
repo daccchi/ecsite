@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   resources :customers, only: [:show, :create]
   
   resource :cart, only: %i(show)
+  resource :charge, only: %i(create)
   
   get 'products', to: 'products#index'
   resources :products, only: %i(new show create) do
