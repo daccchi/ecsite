@@ -2,6 +2,7 @@
 Rails.application.routes.draw do
   root to: 'toppages#index'
   get 'aboutus',to: 'aboutus#index'
+  get 'complete',to: 'complete#index'
   
   get 'login', to: 'sessions#new'
   post 'login', to: 'sessions#create'
