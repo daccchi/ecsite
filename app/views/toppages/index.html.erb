@@ -1,18 +1,18 @@
 <div class="row">
-  <%= image_tag "/ecsite.PNG", width: '124%', height: '124%'%>
+  <%= image_tag "/ecsite.PNG", size: '1440x1040', :alt => 'Flower Photo'%>
 </div>
 
 <div style="margin-left:300px;">
- <%= image_tag "/ecsite2.PNG", width: '74%', height: '74%'%>
+ <%= image_tag "/ecsite2.PNG", width: '74%', height: '74%', :alt => 'Flower Photo'%>
 </div>
 
 <h1 style="text-align:center;">RANKING</h1>
 
 <ul  style="width: 1000px; overflow: hidden; list-style-type: none; text-align:center;" >
-        <li class="img_wrap" style="display: inline;" ><%= link_to image_tag("/pen.PNG", width: '230',height:'230'), @product1 %></li>
-        <li class="img_wrap" style="display: inline;"><%= link_to image_tag("/clock.PNG", width: '230',height:'230'), @product2 %></li>
-        <li class="img_wrap"  style="display: inline;"><%= link_to image_tag("/tennis ball.PNG", width: '230',height:'230'), @product3 %></li>
-        <li class="img_wrap"  style="display: inline;"><%= link_to image_tag("/shoes.PNG", width: '230',height:'230'), @product4 %></li>
+        <li class="img_wrap" style="display: inline;" ><%= link_to image_tag("/pen.PNG", size: '230x230', :alt => 'Flower Photo'), @product1 %></li>
+        <li class="img_wrap" style="display: inline;"><%= link_to image_tag("/clock.PNG",size: '230x230', :alt => 'Flower Photo'), @product2 %></li>
+        <li class="img_wrap"  style="display: inline;"><%= link_to image_tag("/tennis ball.PNG",size: '230x230', :alt => 'Flower Photo'), @product3 %></li>
+        <li class="img_wrap"  style="display: inline;"><%= link_to image_tag("/shoes.PNG", size: '230x230', :alt => 'Flower Photo'), @product4 %></li>
 </ul>
     
 
