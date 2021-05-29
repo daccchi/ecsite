@@ -11,9 +11,9 @@ class Customer < ApplicationRecord
                     
     validates :sex, presence: true, length: { maximum: 3 }
     
-    validates :birthday_year, presence: true, length: { maximum: 4 }
-    validates :birthday_month, presence: true, length: { maximum: 2 }
-    validates :birthday_day, presence: true, length: { maximum: 2 }
+   # validates :birthday_year, presence: true, length: { maximum: 4 }
+    #validates :birthday_month, presence: true, length: { maximum: 2 }
+  #  validates :birthday_day, presence: true, length: { maximum: 2 }
     
      validates :zip, presence: true, length: { maximum: 10 }
       validates :pref, presence: true, length: { maximum: 10 }
