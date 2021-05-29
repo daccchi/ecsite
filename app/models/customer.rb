@@ -10,6 +10,18 @@ class Customer < ApplicationRecord
                     
                     
     validates :sex, presence: true, length: { maximum: 3 }
+    
+    validates :birthday_year, presence: true, length: { maximum: 4 }
+    validates :birthday_month, presence: true, length: { maximum: 2 }
+    validates :birthday_day, presence: true, length: { maximum: 2 }
+    
+     validates :zip, presence: true, length: { maximum: 10 }
+      validates :pref, presence: true, length: { maximum: 10 }
+      # validates :addr, presence: true, length: { maximum: 10 }
+       # validates :addr2, presence: true, length: { maximum: 10 }
+        
+    validates :tel, presence: true, length: { maximum: 15 }
+       
     has_secure_password
     has_one :cart, dependent: :destroy
     

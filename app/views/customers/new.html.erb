@@ -9,37 +9,37 @@
     <%= render 'layouts/error_messages', model: f.object %>
       
       <div class="form-group" width='50px'>
-        <%= f.label :name, 'お名前' %>
+        <%= f.label :name, 'お名前' %><span class="badge badge-danger">必須</span>
         <%= f.text_field :family_name, class: 'form-control',placeholder: "例：山田" %>
         <%= f.text_field :given_name, class: 'form-control',placeholder: "例：太郎" %>
       </div>
       
       <div class="form-group" width='50px'>
-        <%= f.label :name, 'カナ' %>
+        <%= f.label :name, 'カナ' %><span class="badge badge-danger">必須</span>
         <%= f.text_field :family_kana, class: 'form-control',placeholder: "例：ヤマダ" %>
         <%= f.text_field :given_kana, class: 'form-control',placeholder:  "例：タロウ" %>
       </div>
 
       <div class="form-group">
-        <%= f.label :sex, '性別' %>
+        <%= f.label :sex, '性別' %><span class="badge badge-danger">必須</span>
         <%= f.text_field :sex, class: 'form-control' %>
       </div>
 
       <div class="form-group">
-        <%= f.label :barthday, '生年月日' %>
+        <%= f.label :barthday, '生年月日' %><span class="badge badge-danger">必須</span>
         <%= f.text_field :barthday_year, class: 'form-control', placeholder: "例：1997"%>
         <%= f.text_field :barthday_month, class: 'form-control', placeholder:"例：03"%>
         <%= f.text_field :barthday_day, class: 'form-control' ,placeholder:"例：22"%>
       </div>
       
       <div class="form-group">
-        <%= f.label :zip, '郵便番号' %>
-        <%= f.text_field :zip, class: 'form-control' %>
+        <%= f.label :zip, '郵便番号' %><span class="badge badge-danger">必須</span>
+        <%= f.text_field :zip, class: 'form-control', placeholder: "例：123-4567" %>
       </div>
       
       <div class="form-group">
-        <%= f.label :pref, '都道府県' %>
-        <%= f.text_field :pref, class: 'form-control' %>
+        <%= f.label :pref, '都道府県' %><span class="badge badge-danger">必須</span>
+        <%= f.text_field :pref, class: 'form-control', placeholder: "例：東京都" %>
       </div>
       
       <div class="form-group">
@@ -50,22 +50,22 @@
       </div>
       
       <div class="form-group">
-        <%= f.label :tel, '電話番号' %>
-        <%= f.text_field :tel, class: 'form-control' %>
+        <%= f.label :tel, '電話番号' %><span class="badge badge-danger">必須</span>
+        <%= f.text_field :tel, class: 'form-control' , placeholder: "例：08012345678"%>
       </div>
 
       <div class="form-group">
-        <%= f.label :email, 'Email' %>
+        <%= f.label :email, 'Email' %><span class="badge badge-danger">必須</span>
         <%= f.email_field :email, class: 'form-control' %>
       </div>
 
       <div class="form-group">
-        <%= f.label :password, 'パスワード' %>
+        <%= f.label :password, 'パスワード' %><span class="badge badge-danger">必須</span>
         <%= f.password_field :password, class: 'form-control' %>
       </div>
 
       <div class="form-group">
-        <%= f.label :password_confirmation, 'パスワード確認' %>
+        <%= f.label :password_confirmation, 'パスワード確認' %><span class="badge badge-danger">必須</span>
         <%= f.password_field :password_confirmation, class: 'form-control' %>
       </div>
       
