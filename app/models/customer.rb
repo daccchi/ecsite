@@ -20,7 +20,7 @@ class Customer < ApplicationRecord
       # validates :addr, presence: true, length: { maximum: 10 }
        # validates :addr2, presence: true, length: { maximum: 10 }
         
-    validates :tel, presence: true, length: { maximum: 15 }
+    validates :tel, presence: true, length: { maximum: 15 }, numericality: { only_integer: true }
        
     has_secure_password
     has_one :cart, dependent: :destroy
