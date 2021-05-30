@@ -1,9 +1,11 @@
-<h1><%= @product.product_name %></h1>
-<p><%= @product.comment %></p>
-
-
+<div style="text-align:center;">
+    <h1><%= @product.product_name %></h1>
+    <p><%= @product.comment %></p>
     
-<img src="/<%=@product.image%>" alt="Company Logo" >
-<p>￥<%= @product.price %>円</p>
-
-<%= link_to 'カートに入れる', product_add_to_carts_path(@product), method: :post , class: 'btn btn-light' %>
+    
+    
+    <img src="/<%=@product.image%>" alt="Company Logo" >
+    <p>￥<%= @product.price %>円</p>
+    
+    <%= link_to 'カートに入れる', product_add_to_carts_path(@product), method: :post , class: 'btn btn-light' %>
+</div>
