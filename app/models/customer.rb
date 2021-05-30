@@ -11,11 +11,11 @@ class Customer < ApplicationRecord
                     
     validates :sex, presence: true, length: { maximum: 3 }
     
-   # validates :birthday_year, presence: true, length: { maximum: 4 }
-    #validates :birthday_month, presence: true, length: { maximum: 2 }
-  #  validates :birthday_day, presence: true, length: { maximum: 2 }
+    validates :birthday_year, presence: true, length: { maximum: 4 }, numericality: { only_integer: 4 }
+    validates :birthday_month, presence: true, length: { maximum: 2 }, numericality: { only_integer: 2 }
+    validates :birthday_day, presence: true, length: { maximum: 2 }, numericality: { only_integer: 2 }
     
-     validates :zip, presence: true, length: { maximum: 10 }
+     validates :zip, presence: true, length: { maximum: 7 }, numericality: { only_integer: true }
       validates :pref, presence: true, length: { maximum: 10 }
       # validates :addr, presence: true, length: { maximum: 10 }
        # validates :addr2, presence: true, length: { maximum: 10 }
