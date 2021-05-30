@@ -61,3 +61,4 @@ end
 
 gem 'stripe'
 
+gem 'hashid-rails', '~> 1.0'

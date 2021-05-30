@@ -1,4 +1,10 @@
 class Customer < ApplicationRecord
+ 
+ include Hashid::Rails
+
+ 
+ 
+ 
     before_save { self.email.downcase! }
     validates :family_name, presence: true, length: { maximum: 50 }
     validates :given_name, presence: true, length: { maximum: 50 }
@@ -28,5 +34,7 @@ class Customer < ApplicationRecord
     def prepare_cart
      cart || create_cart
     end
+    
+    
 
 end
