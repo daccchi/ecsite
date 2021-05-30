@@ -14,45 +14,8 @@
         <%= f.text_field :given_name, class: 'form-control',placeholder: "例：太郎" %>
       </div>
       
-      <div class="form-group" >
-        <%= f.label :family_kana, 'カナ' %><span class="badge badge-danger">必須</span>
-        <%= f.text_field :family_kana, class: 'form-control',placeholder: "例：ヤマダ" %>
-        <%= f.text_field :given_kana, class: 'form-control',placeholder:  "例：タロウ" %>
-      </div>
+    
 
-      <div class="form-group">
-        <%= f.label :sex, '性別' %>
-        <%= f.select :sex, [["男", "男"], ["女", "女"]] , class: 'form-control' %>
-      </div>
-
-      <div class="form-group">
-        <%= f.label :barthday_year, '生年月日' %>
-        <%= f.text_field :barthday_year, class: 'form-control', placeholder: "例：1997"%>
-        <%= f.text_field :barthday_month, class: 'form-control', placeholder:"例：03"%>
-        <%= f.text_field :barthday_day, class: 'form-control' ,placeholder:"例：22"%>
-      </div>
-      
-      <div class="form-group">
-        <%= f.label :zip, '郵便番号' %><span class="badge badge-danger">必須</span>
-        <%= f.text_field :zip, class: 'form-control', placeholder: "例：1234567" %>
-      </div>
-      
-      <div class="form-group">
-        <%= f.label :pref, '都道府県' %><span class="badge badge-danger">必須</span>
-        <%= f.text_field :pref, class: 'form-control', placeholder: "例：東京都" %>
-      </div>
-      
-      <div class="form-group">
-        <%= f.label :addr, '住所' %>
-        <%= f.text_field :addr, class: 'form-control', placeholder: "例：○○市○○区○○町"%>
-        <%= f.text_field :addr2, class: 'form-control', placeholder:"例：○○1-1"%>
-        <%= f.text_field :addr3, class: 'form-control' ,placeholder:"例：○○マンション101号室"%>
-      </div>
-      
-      <div class="form-group">
-        <%= f.label :tel, '電話番号' %><span class="badge badge-danger">必須</span>
-        <%= f.text_field :tel, class: 'form-control' , placeholder: "例：08012345678"%>
-      </div>
 
       <div class="form-group">
         <%= f.label :email, 'Email' %><span class="badge badge-danger">必須</span>
