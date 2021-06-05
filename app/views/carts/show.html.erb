@@ -12,15 +12,19 @@
         <% end %>
     </ul>
     
-    <p>合計金額 <%=@total_price%> 円</p>
+    <p class='text-center'>合計金額 <%=@total_price%> 円</p>
+    <p><%=@count_products%></p>
+    <p class='text-center'>
     <%= link_to '買い物を続ける', '/products', class: 'btn btn-light' %>
+    </p>
     
+    <center>
     <%= form_tag charge_path do %>
     
        <% @product.each do |p| %>
        <%= hidden_field_tag 'product_ids[]',p.id %>
        <%end%>
-       
+  
       <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
             data-key=<%=ENV['STRIPE_API_KEY']%>
             data-description="payment"
@@ -28,7 +32,8 @@
             
             data-currency="jpy"
             data-locale="auto"></script>
+            
     <% end %>
-    
+    </center>
 </div>
 

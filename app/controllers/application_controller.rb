@@ -6,9 +6,12 @@ class ApplicationController < ActionController::Base
     def logged_in?
     !!current_customer
     
+    end
+  
+  
+  def counts
+    @count_products = cart.products.count
   end
-  
-  
   
   def current_customer
     @current_customer ||= Customer.find_by(id: session[:customer_id])

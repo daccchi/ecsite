@@ -9,6 +9,9 @@ class CartsController < ApplicationController
     @product = cart.products
     
     @total_price = cart.total_price
+    
+    @count_products = cart.products.count
+    
   end
   
 end
